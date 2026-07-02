@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Lute Maekaeka Kazembe</title>
+<meta name="description" content="Global Strategic Communications & Advocacy Leader with 15+ years shaping narratives across Africa, the Middle East, Asia and South America.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#0D1117;--ink-soft:#3A3F4A;--ink-muted:#7C8494;
+    --bg:#F7F5F1;--bg-white:#FFFFFF;--rule:#E2DDD6;
+    --forest:#1A3A2A;--forest-light:#2D5C42;
+    --gold:#8B6914;--gold-light:#C8A96E;--gold-pale:#F0E8D6;
+    --radius:2px;
+  }
+  html{scroll-behavior:smooth;font-size:16px}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;
+    background:rgba(247,245,241,0.94);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 max(20px,5vw)}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;
+    letter-spacing:.12em;color:var(--ink);text-decoration:none}
+  .nav-links{display:flex;gap:0;list-style:none}
+  .nav-links a{display:block;padding:8px 16px;font-size:.75rem;font-weight:500;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+    text-decoration:none;transition:color .2s;border-radius:var(--radius)}
+  .nav-links a:hover,.nav-links a.active{color:var(--forest)}
+  .nav-links a.active{font-weight:600}
+  .nav-cta{background:var(--forest);color:#fff!important;padding:8px 18px!important;border-radius:var(--radius)}
+  .nav-cta:hover{background:var(--gold)!important;color:#fff!important}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);transition:.3s}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;
+    background:var(--bg-white);z-index:199;flex-direction:column;
+    padding:40px max(20px,5vw);gap:24px}
+  .mobile-nav a{font-size:1.4rem;font-family:'Cormorant Garamond',serif;
+    font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:20px}
+  .mobile-nav.open{display:flex}
+
+  /* TYPOGRAPHY */
+  .eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+  .display{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;color:var(--ink)}
+  .body-text{font-size:.94rem;color:var(--ink-soft);line-height:1.8}
+  .divider{width:40px;height:2px;background:var(--gold-light);margin:24px 0 40px}
+
+  /* SECTIONS */
+  .section{padding:96px max(20px,5vw)}
+  .section-inner{max-width:1100px;margin:0 auto}
+  .section--dark{background:var(--forest)}
+  .section--dark .eyebrow{color:var(--gold-light)}
+  .section--dark .display{color:#fff}
+  .section--dark .body-text{color:rgba(255,255,255,.7)}
+  .section--dark .divider{background:var(--gold-light)}
+  .section--cream{background:var(--bg)}
+  .section--white{background:var(--bg-white)}
+
+  /* TAGS */
+  .tag{font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--forest);border:1px solid var(--forest);padding:5px 12px;
+    border-radius:var(--radius);display:inline-block}
+
+  /* BUTTONS */
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;
+    font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+    text-decoration:none;border-radius:var(--radius);transition:.2s;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+  .btn--primary{background:var(--forest);color:#fff}
+  .btn--primary:hover{background:var(--gold);transform:translateY(-1px)}
+  .btn--outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn--outline:hover{background:var(--ink);color:#fff}
+  .btn--outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+  .btn--outline-white:hover{background:rgba(255,255,255,.1)}
+
+  /* TICKER */
+  .ticker-wrap{background:var(--forest);overflow:hidden;padding:28px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .ticker-track{display:flex;gap:0;width:max-content;animation:ticker 28s linear infinite}
+  .ticker-track:hover{animation-play-state:paused}
+  .ticker-item{display:flex;align-items:center;gap:48px;padding:0 48px;white-space:nowrap}
+  .ticker-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-light);line-height:1}
+  .ticker-lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--gold-light);opacity:.4;flex-shrink:0}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* CARDS */
+  .card{background:var(--bg-white);border:1px solid var(--rule);padding:28px;transition:border-color .2s,transform .2s;border-radius:var(--radius)}
+  .card:hover{border-color:var(--gold-light);transform:translateY(-2px)}
+
+  /* FOOTER */
+  footer{background:var(--ink);padding:48px max(20px,5vw);text-align:center}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(255,255,255,.6);margin-bottom:16px;letter-spacing:.12em}
+  .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+  .footer-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+  .footer-links a:hover{color:var(--gold-light)}
+  .footer-note{font-size:.72rem;color:rgba(255,255,255,.2);letter-spacing:.06em}
+
+  /* FORM */
+  .form-group{display:flex;flex-direction:column;gap:6px}
+  .form-label{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)}
+  .form-input,.form-textarea{font-family:'Inter',sans-serif;font-size:.92rem;color:var(--ink);background:var(--bg);border:1px solid var(--rule);padding:11px 15px;outline:none;transition:border-color .2s;width:100%;border-radius:var(--radius);resize:none}
+  .form-input:focus,.form-textarea:focus{border-color:var(--forest);background:#fff}
+  .form-textarea{min-height:120px}
+
+  @media(max-width:768px){
+    .nav-links{display:none}
+    .nav-hamburger{display:flex}
+    .section{padding:72px max(20px,5vw)}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+.contact-hero{padding:140px max(20px,7vw) 80px;background:var(--forest)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-item{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink-soft);transition:color .2s}
+.contact-item:first-child{border-top:1px solid var(--rule)}
+.contact-item:hover{color:var(--forest)}
+.contact-item-icon{width:44px;height:44px;flex-shrink:0;background:var(--bg);border:1px solid var(--rule);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;transition:.2s}
+.contact-item:hover .contact-item-icon{background:var(--forest);border-color:var(--forest)}
+.contact-item-icon svg{width:18px;height:18px;stroke:var(--ink-soft);fill:none;stroke-width:1.5;transition:.2s}
+.contact-item:hover .contact-item-icon svg{stroke:var(--gold-light)}
+.contact-item-lbl{font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);display:block;margin-bottom:2px}
+.contact-item-val{font-size:.92rem;color:var(--ink)}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:48px}}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">LMK</a>
+  <ul class="nav-links"><li><a href="index.html" class="">Home</a></li><li><a href="about.html" class="">About</a></li><li><a href="work.html" class="">Work</a></li><li><a href="education.html" class="">Education</a></li><li><a href="contact.html" class="active nav-cta">Contact</a></li></ul>
+  <div class="nav-hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="about.html">About</a><a href="work.html">Work</a><a href="education.html">Education</a><a href="contact.html">Contact</a></div>
+<script>function toggleMenu(){var m=document.getElementById('mobileNav');m.classList.toggle('open');}</script>
+
+
+<div class="contact-hero">
+  <div class="section-inner">
+    <span class="eyebrow" style="color:var(--gold-light)">Contact</span>
+    <h1 class="display" style="font-size:clamp(2.4rem,4vw,3.4rem);margin-bottom:16px;color:#fff">Let's connect</h1>
+    <p class="body-text" style="color:rgba(255,255,255,.6);max-width:480px">If your organization is looking for a global communications leader who blends strategic insight, cross-cultural intelligence, and a deep commitment to equity and impact — I'd love to hear from you.</p>
+  </div>
+</div>
+<section class="section section--white">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Reach Out</span>
+        <h2 class="display" style="font-size:clamp(1.6rem,2.5vw,2rem);margin-bottom:36px">Direct contact</h2>
+        <a href="mailto:Lute.Kazembe@outlook.com" class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><span class="contact-item-lbl">Email</span><span class="contact-item-val">Lute.Kazembe@outlook.com</span></div>
+        </a>
+        <a href="https://linkedin.com/in/lutekazembe" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><span class="contact-item-lbl">LinkedIn</span><span class="contact-item-val">linkedin.com/in/lutekazembe</span></div>
+        </a>
+        <a href="tel:+254708531951" class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.09 6.09l1.18-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><span class="contact-item-lbl">Phone</span><span class="contact-item-val">+254 708 531 951</span></div>
+        </a>
+        <div class="contact-item" style="border-bottom:none">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><span class="contact-item-lbl">Location</span><span class="contact-item-val">Nairobi, Kenya</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="display" style="font-size:clamp(1.6rem,2.5vw,2rem);margin-bottom:36px">Get in touch</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group"><label class="form-label" for="name">Your Name</label><input class="form-input" id="name" type="text" placeholder="Jane Smith" required></div>
+          <div class="form-group"><label class="form-label" for="org">Organisation</label><input class="form-input" id="org" type="text" placeholder="Your organisation"></div>
+          <div class="form-group"><label class="form-label" for="email">Email Address</label><input class="form-input" id="email" type="email" placeholder="jane@organisation.org" required></div>
+          <div class="form-group"><label class="form-label" for="message">Message</label><textarea class="form-textarea" id="message" placeholder="Tell me about your organisation and how I can help..." required></textarea></div>
+          <button type="submit" class="btn btn--primary" style="align-self:flex-start">Send Message</button>
+          <p id="form-status" style="font-size:.85rem;color:var(--forest);display:none;font-weight:500">✓ Message sent — I'll be in touch shortly.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+function handleSubmit(e){e.preventDefault();var btn=e.target.querySelector('.btn');btn.textContent='Sending...';btn.disabled=true;setTimeout(function(){document.getElementById('form-status').style.display='block';btn.textContent='Sent ✓';e.target.reset();},800);}
+</script>
+
+
+<footer>
+  <p class="footer-logo">LMK</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-note">Lute Maekaeka Kazembe &nbsp;·&nbsp; Strategic Communications &amp; Advocacy Leader &nbsp;·&nbsp; Nairobi, Kenya</p>
+</footer>
+
+</body>
+</html>
