@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Lute Kazembe</title>
+    <title>Contact | LMK</title>
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --text-color: #1a1a1a;
+            --bg-color: #fafafa;
+            --text-color: #111827;
             --accent-color: #005a36;
-            --muted-color: #555555;
+            --accent-hover: #004227;
+            --muted-color: #4b5563;
             --card-bg: #ffffff;
-            --border-color: #e5e5e5;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
         }
+
+        * { box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -21,29 +27,33 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             border-bottom: 1px solid var(--border-color);
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         nav {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem 2rem;
         }
+
         .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--text-color);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-color);
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -51,53 +61,70 @@
             margin: 0;
             padding: 0;
         }
+
         .nav-links a {
             text-decoration: none;
             color: var(--muted-color);
-            font-weight: 500;
-            transition: color 0.2s;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 4px;
         }
+
         .nav-links a.active, .nav-links a:hover {
             color: var(--accent-color);
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
+
         .contact-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
+            border-radius: 12px;
             padding: 3rem;
             margin-top: 2rem;
+            box-shadow: var(--shadow-sm);
         }
+
         .contact-item {
             margin-bottom: 2rem;
         }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
         .contact-item h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.1rem;
+            margin: 0 0 0.4rem 0;
+            font-size: 0.9rem;
             color: var(--muted-color);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         .contact-item a {
             font-size: 1.3rem;
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            transition: color 0.2s ease;
         }
+
         .contact-item a:hover {
+            color: var(--accent-hover);
             text-decoration: underline;
         }
+
         footer {
             border-top: 1px solid var(--border-color);
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             color: var(--muted-color);
-            font-size: 0.9rem;
-            margin-top: 4rem;
+            background: #ffffff;
+            margin-top: 5rem;
         }
     </style>
 </head>
@@ -105,7 +132,7 @@
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Lute Kazembe</a>
+            <a href="index.html" class="logo">LMK</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="work.html">Work</a></li>
@@ -116,7 +143,7 @@
 
     <main class="container">
         <h1>Get in Touch</h1>
-        <p style="color: var(--muted-color); font-size: 1.2rem;">Available for executive brand leadership, strategic communications advisory, and global content management engagements.</p>
+        <p style="color: var(--muted-color); font-size: 1.15rem;">Available for executive brand leadership, strategic communications advisory, and global content management engagements.</p>
 
         <div class="contact-card">
             <div class="contact-item">
