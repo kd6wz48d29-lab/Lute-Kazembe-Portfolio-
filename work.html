@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Portfolio | Lute Kazembe</title>
+    <title>Work Portfolio | LMK</title>
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --text-color: #1a1a1a;
+            --bg-color: #fafafa;
+            --text-color: #111827;
             --accent-color: #005a36;
-            --muted-color: #555555;
+            --accent-hover: #004227;
+            --muted-color: #4b5563;
             --card-bg: #ffffff;
-            --border-color: #e5e5e5;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
         }
+
+        * { box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -21,29 +27,33 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             border-bottom: 1px solid var(--border-color);
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         nav {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem 2rem;
         }
+
         .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--text-color);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-color);
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -51,47 +61,71 @@
             margin: 0;
             padding: 0;
         }
+
         .nav-links a {
             text-decoration: none;
             color: var(--muted-color);
-            font-weight: 500;
-            transition: color 0.2s;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 4px;
         }
+
         .nav-links a.active, .nav-links a:hover {
             color: var(--accent-color);
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
+
         .page-header {
             margin-bottom: 3rem;
         }
+
         .page-header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
+
         .category-title {
             font-size: 1.6rem;
             color: var(--accent-color);
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 0.4rem;
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
         }
+
+        /* PROJECT CARD LAYOUT */
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
+            border-radius: 10px;
             padding: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-card.with-image {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
         .project-card h3 {
             margin-top: 0;
-            font-size: 1.3rem;
-            color: var(--text-color);
+            font-size: 1.35rem;
         }
+
         .project-card .role {
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -100,16 +134,35 @@
             color: var(--accent-color);
             margin-bottom: 0.8rem;
         }
-        .project-card ul {
-            padding-left: 1.2rem;
-            margin-bottom: 0;
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
         }
+
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             color: var(--muted-color);
-            font-size: 0.9rem;
+            background: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .project-card.with-image {
+                grid-template-columns: 1fr;
+            }
+            .project-image {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -117,7 +170,7 @@
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Lute Kazembe</a>
+            <a href="index.html" class="logo">LMK</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="work.html" class="active">Work</a></li>
@@ -128,8 +181,8 @@
 
     <main class="container">
         <div class="page-header">
-            <h1>Featured Work & Projects</h1>
-            <p style="color: var(--muted-color); font-size: 1.1rem;">Organised by core discipline: Brand Leadership, Global Campaigns, and Field Storytelling.</p>
+            <h1>Featured Work & Campaigns</h1>
+            <p style="color: var(--muted-color); font-size: 1.1rem;">Strategic brand management, global advocacy campaigns, and on-the-ground visual storytelling.</p>
         </div>
 
         <!-- CATEGORY 1 -->
@@ -137,56 +190,50 @@
         
         <div class="project-card">
             <div class="role">Head of Brand, Content and Media | Oxfam International</div>
-            <h3>Oxfam Global Brand Identity & Visual Governance ("The Future Is Equal")</h3>
-            <p>Directed brand governance for Oxfam's global brand identity and message system, ensuring consistent positioning, tone of voice, and visual identity across 35 affiliates and regional platforms. Led the identity rollout that achieved 80% adoption confederation-wide.</p>
+            <h3>Oxfam Global Brand Identity & Visual Governance</h3>
+            <p>Directed brand governance for Oxfam's global identity and message system ("The Future Is Equal"), ensuring consistent positioning, tone of voice, and visual identity across 35 affiliates and regional platforms.</p>
         </div>
 
         <div class="project-card">
             <div class="role">Head of Brand, Content and Media | Oxfam International</div>
             <h3>Global Ethical Content Guidelines</h3>
-            <p>Authored Oxfam’s Global Ethical Content Guidelines establishing binding commitments for how Oxfam and its global partners gather, manage, and use content worldwide. Referenced as an industry standard across partner INGOs.</p>
-        </div>
-
-        <div class="project-card">
-            <div class="role">Final Sign-Off Authority | Oxfam International</div>
-            <h3>Flagship Annual Report Sign-Off (2021/2022)</h3>
-            <p>Held final sign-off authority for Oxfam International’s Annual Report, translating global impact across 90 countries and 15.6 million people reached into a single publicly accountable publication reviewed by global media and donors.</p>
-        </div>
-
-        <div class="project-card">
-            <div class="role">Country Communications Manager | Plan International Zambia</div>
-            <h3>Country Strategic Plan Communications Design</h3>
-            <p>Designed the visual communication strategy and layout of Plan International Zambia's Country Strategic Plan, translating complex strategic goals into accessible visual documents.</p>
+            <p>Authored Oxfam’s Global Ethical Content Guidelines establishing binding commitments for how Oxfam and its global partners gather, manage, and use content worldwide.</p>
         </div>
 
         <!-- CATEGORY 2 -->
         <h2 class="category-title">02. Campaigns</h2>
 
+        <!-- IMAGE 2: PLAN CAMPAIGN IMAGE -->
+        <div class="project-card with-image">
+            <div>
+                <div class="role">Country Communications Manager | Plan International Zambia</div>
+                <h3>"Because I Am a Girl" Global Campaign Rollout</h3>
+                <p>Directed the Zambia rollout of the global campaign to fight gender inequality, securing landmark policy reform on school retention for adolescent girls and securing international coverage on BBC, Al Jazeera, NYT, and The Guardian.</p>
+            </div>
+            <div>
+                <img src="plan-campaign.jpg" alt="Plan International Zambia Campaign" class="project-image">
+            </div>
+        </div>
+
         <div class="project-card">
             <div class="role">Middle East Regional Communications Manager | Medair</div>
             <h3>International Women's Day Regional Campaign (2022)</h3>
-            <p>Directed a multi-country social media campaign across DR Congo, Lebanon, Syria, South Sudan, Jordan, and Yemen, gathering first-person testimonies from women accessing humanitarian services to center their voices with dignity and agency.</p>
-        </div>
-
-        <div class="project-card">
-            <div class="role">Country Communications Manager | Plan International Zambia</div>
-            <h3>"Because I Am a Girl" Global Campaign Rollout</h3>
-            <p>Directed the Zambia rollout of the global campaign to fight gender inequality, securing landmark policy reform on school retention for adolescent girls and securing international coverage on BBC, Al Jazeera, NYT, and The Guardian.</p>
+            <p>Directed a multi-country social media campaign across DR Congo, Lebanon, Syria, South Sudan, Jordan, and Yemen, centering women's voices with dignity and agency.</p>
         </div>
 
         <!-- CATEGORY 3 -->
-        <h2 class="category-title">03. Field Photography & Editorial Writing</h2>
+        <h2 class="category-title">03. Field Photography & Editorial</h2>
 
-        <div class="project-card">
-            <div class="role">Middle East Regional Communications Manager | Medair</div>
-            <h3>Field Photography & Visual Documentation (Jordan)</h3>
-            <p>Personally documented health monitoring visits, case management, and everyday community life across Amman, Zarqa, and Irbid for donor reporting and public communications, upholding dignity-first ethical content standards.</p>
-        </div>
-
-        <div class="project-card">
-            <div class="role">Author & Photographer | Medair Web Story</div>
-            <h3>Editorial Writing: "Jordan: A Winter Wonderland"</h3>
-            <p>Authored and photographed a human-centered feature story documenting the realities faced by Syrian refugees living in Irbid during harsh winter conditions, bringing personal human context to global displacement statistics.</p>
+        <!-- IMAGE 4: JORDAN FIELD VISIT IMAGE -->
+        <div class="project-card with-image">
+            <div>
+                <div class="role">Middle East Regional Communications Manager | Medair</div>
+                <h3>Field Photography & Visual Documentation (Jordan)</h3>
+                <p>Personally documented health monitoring visits, case management, and community resilience across Amman, Zarqa, and Irbid for global donor reporting and editorial features.</p>
+            </div>
+            <div>
+                <img src="jordan-visit.jpg" alt="Medair Jordan Field Visit" class="project-image">
+            </div>
         </div>
 
     </main>
